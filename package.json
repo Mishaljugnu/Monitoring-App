@@ -1,0 +1,15 @@
+{
+  "name": "netvision-ai",
+  "private": true,
+  "workspaces": [
+    "apps/desktop"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/desktop",
+    "build": "npm run build -w apps/desktop",
+    "backend": "python -m uvicorn app.main:app --app-dir apps/backend --host 127.0.0.1 --port 8000"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
